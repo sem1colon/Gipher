@@ -1,0 +1,52 @@
+<main>
+  <section class="container mt-5">
+    <article class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <form [formGroup]="searchForm" class="card card-sm">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col">
+              <input class="form-control form-control-lg form-control-borderless" id="q" formControlName="keyword" type="search"
+                placeholder="Search GIFs..">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-lg btn-success" id="search-btn" [disabled]="!searchForm.valid" (click)="search()"
+                type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </article>
+  </section>
+  <section class="container">
+    <article>
+      <h1 class="row justify-content-center">Trending Gifs</h1>
+      <div class="row row justify-content-center">
+        <h5 class="row justify-content-center" *ngIf="gifs==[]">No Data Found!</h5>
+        <div class="card-deck col-lg-4 gifs" *ngFor="let gif of gifs">
+          <div class="card">
+            <a (click)="onNavigate(gif.original)">
+              <img class="card-img-top" src="{{gif.preview}}" alt="{{gif.title}}">
+            </a>
+            <div class="card-body">
+              <a class="card-link">
+                <i class="fas fa-heart fav" *ngIf="gif.favourite" (click)="removeFavourite(gif)" data-toggle="tooltip"
+                  title="Remove from Favs!"></i>
+              </a>
+              <a class="card-link">
+                <i class="far fa-heart fav" *ngIf="!gif.favourite" (click)="favourite(gif)" data-toggle="tooltip" title="Add to Favs!"></i>
+              </a>
+              <a class="card-link" (click)="removeBookmark(gif)" *ngIf="gif.bookmark" data-toggle="tooltip" title="Remove from Bookmark!">
+                <i class="fas fa-bookmark bookmark"></i>
+              </a>
+              <a class="card-link" (click)="bookmark(gif)" *ngIf="!gif.bookmark" data-toggle="tooltip" title="Bookmark this!">
+                <i class="far fa-bookmark bookmark"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>

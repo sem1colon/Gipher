@@ -1,0 +1,16 @@
+.bookmark {
+    float: left;
+    color: green;
+    font-size: 20px;
+}
+
+.gif-card {
+    width: 18rem;
+}
+
+.card-img-top {
+    height: 150px;
+}
+.fas:hover {
+    cursor: pointer;
+}

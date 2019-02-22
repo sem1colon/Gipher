@@ -1,0 +1,56 @@
+.fav {
+    float: left;
+    color: red;
+    font-size: 20px;
+}
+
+.bookmark {
+    float: left;
+    padding-left: 20px;
+    color: green;
+    font-size: 20px;
+}
+
+.gif-card {
+    width: 18rem;
+}
+
+.card-img-top {
+    height: 150px;
+}
+
+.fa-search {
+    color: whitesmoke;
+}
+
+.fa-search :hover {
+    color: white;
+}
+
+.fav:hover {
+    cursor: pointer;
+}
+
+.bookmark:hover{
+    cursor: pointer;
+}
+
+.text-body {
+    color: whitesmoke;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover,
+.form-control-borderless:active,
+.form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.gifs {
+    margin-top: 30px;
+}

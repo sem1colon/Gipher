@@ -1,0 +1,27 @@
+image: 'maven:3-jdk-8'
+before_script:
+    - 'source ./project.sh'
+stages:
+    - test
+    - build
+services:
+  - 'mysql'
+variables:
+ MYSQL_DATABASE: gipherdb
+ MYSQL_CI_URL: jdbc:mysql://mysql/gipherdb
+ MYSQL_USER: app_root
+ MYSQL_PASSWORD: root
+ MYSQL_ROOT_PASSWORD: root
+cache:
+  paths:
+  - .m2/repository
+  - target
+maven-test:
+ stage: test
+ script: "mvn test -B"
+maven-build:
+ stage: build
+ script: "mvn package -U"
+ artifacts:
+  paths:
+  - target/*.jar

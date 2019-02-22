@@ -1,0 +1,17 @@
+.fav {
+    float: left;
+    color: red;
+    font-size: 20px;
+}
+
+.gif-card {
+    width: 18rem;
+}
+
+.card-img-top {
+    height: 150px;
+}
+
+.fav:hover {
+    cursor: pointer;
+}

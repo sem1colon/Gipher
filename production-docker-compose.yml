@@ -1,0 +1,44 @@
+version: '3.3'
+services:
+  accountmanager-app:
+   image: sem1colon /gipher:accountmanager-image
+   container_name: accountmanager-app-docker
+   restart: always
+   network_mode: host
+   ports:
+     - 9001:9001
+   expose:
+     - 9001
+   depends_on:
+     - gipher-mysql
+  giphermanager-app:
+   image: sem1colon /giphermanager:giphermanager-app-image
+   container_name: giphermanager-app-docker
+   restart: always
+   network_mode: host
+   ports:
+     - 9002:9002
+   expose:
+     - 9002
+   depends_on:
+     - gipher-mysql
+
+  gipher-mysql:
+   image: mysql:
+   container_name: mysql-docker
+   network_mode: host
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     MYSQL_DATABASE: gipherdb
+     MYSQL_USER: gipheruser
+     MYSQL_PASSWORD: gipherpwd
+   volumes:
+     - /opt/gipher/mysqldb:/var/lib/mysql
+  gipherui-app:
+    image: sem1colon /gipher:gipherui-app
+    container_name: gipher-ui-docker
+    network_mode: host
+    ports:
+      - 4200:4200

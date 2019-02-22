@@ -1,0 +1,22 @@
+<main>
+    <section class="container">
+        <article class="justify-content-center">
+            <h1 class="row justify-content-center title">Favourites</h1>
+            <div class="row justify-content-center">
+                <h5 class="row justify-content-center" *ngIf="gifs==[]">No Favourites Found!</h5>
+                <div class="card-deck col-lg-4 gifs" *ngFor="let gif of gifs">
+                    <div class="card">
+                        <a (click)="onNavigate(gif.url)">
+                            <img class="card-img-top" src="{{gif.preview}}" alt="{{gif.title}}">
+                        </a>
+                        <div class="card-body">
+                            <a class="card-link" (click)="removeFavourite(gif)" data-toggle="tooltip" title="Remove from Favs!">
+                                <i class="fas fa-heart fav"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</main>
