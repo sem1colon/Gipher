@@ -1,21 +1,5 @@
 package com.stackroute.giphermanager.controller;
 
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.stackroute.giphermanager.domain.Gif;
 import com.stackroute.giphermanager.domain.Search;
 import com.stackroute.giphermanager.exception.BookmarkAlreadyExistsException;
@@ -24,8 +8,15 @@ import com.stackroute.giphermanager.exception.FavouriteAlreadyExitsException;
 import com.stackroute.giphermanager.exception.FavouriteNotFoundException;
 import com.stackroute.giphermanager.service.GifService;
 import com.stackroute.giphermanager.service.SearchService;
-
 import io.jsonwebtoken.Jwts;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/gifservice")

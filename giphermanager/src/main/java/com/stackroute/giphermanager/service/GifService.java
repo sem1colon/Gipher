@@ -1,12 +1,12 @@
 package com.stackroute.giphermanager.service;
 
-import java.util.List;
-
 import com.stackroute.giphermanager.domain.Gif;
 import com.stackroute.giphermanager.exception.BookmarkAlreadyExistsException;
+import com.stackroute.giphermanager.exception.BookmarkNotFoundException;
 import com.stackroute.giphermanager.exception.FavouriteAlreadyExitsException;
 import com.stackroute.giphermanager.exception.FavouriteNotFoundException;
-import com.stackroute.giphermanager.exception.BookmarkNotFoundException;
+
+import java.util.List;
 
 public interface GifService {
 

@@ -1,10 +1,9 @@
 package com.stackroute.giphermanager.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.stackroute.giphermanager.domain.Search;
 import com.stackroute.giphermanager.repository.SearchRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class SearchServiceImpl implements SearchService {
