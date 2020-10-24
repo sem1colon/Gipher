@@ -1,15 +1,13 @@
 package com.stackroute.accountmanager.service;
 
+import com.stackroute.accountmanager.model.User;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.stereotype.Service;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.springframework.stereotype.Service;
-
-import com.stackroute.accountmanager.model.User;
-
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 
 @Service
 public class JWTGeneratorImpl implements JWTGenerator {
