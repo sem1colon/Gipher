@@ -11,7 +11,6 @@ export class JwtInterceptor implements HttpInterceptor {
         const re = 'https://api.giphy.com/v1/gifs/';
         if (request.url.search(re) === -1) {
             if (token) {
-                console.log("Sending Token in Header", token);
                 return next.handle(
                     request.clone({
                         headers: request.headers.append('authorization', `Bearer ${token}`)

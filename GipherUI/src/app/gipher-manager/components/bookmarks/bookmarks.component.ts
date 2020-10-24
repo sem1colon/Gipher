@@ -18,7 +18,6 @@ export class BookmarksComponent implements OnInit {
   }
 
   removeBookmark(gif) {
-    console.log(gif);
     this.service.removeBookmark(gif).subscribe(data => {
      
     });
