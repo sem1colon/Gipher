@@ -1,15 +1,14 @@
 package com.stackroute.accountmanager.service;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-
 import com.stackroute.accountmanager.exception.UserAlreadyExistsException;
 import com.stackroute.accountmanager.exception.UserNotFoundException;
 import com.stackroute.accountmanager.model.User;
 import com.stackroute.accountmanager.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {

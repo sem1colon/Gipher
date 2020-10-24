@@ -1,16 +1,15 @@
 package com.stackroute.giphermanager.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.stackroute.giphermanager.domain.Gif;
 import com.stackroute.giphermanager.exception.BookmarkAlreadyExistsException;
 import com.stackroute.giphermanager.exception.BookmarkNotFoundException;
 import com.stackroute.giphermanager.exception.FavouriteAlreadyExitsException;
 import com.stackroute.giphermanager.exception.FavouriteNotFoundException;
 import com.stackroute.giphermanager.repository.GifRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class GifServiceImpl implements GifService {
