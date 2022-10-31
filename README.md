@@ -7,7 +7,6 @@ Get all the trending gifs and search for your desired gifs. Gipher is a gifs man
 This application is made using **Angular** as front-end, **Spring-Boot** as back-end and **MySQL** as database.
 
 ## How to run the application?
-
 *  Start your MySQL Server and create a database
 `create database gipherdb;`
 *  Configure your MySQL details in *env-variable.sh* files
@@ -26,7 +25,7 @@ This application is made using **Angular** as front-end, **Spring-Boot** as back
 
 *  Run `ng test` to execute the Angular unit tests via [Karma](https://karma-runner.github.io)
 
-*  Run `ng e2e` to execute the Angular end-to-end tests via [Protractor](http://www.protractortest.org/)
+*  Run `ng e2e` to execute the Angular end-to-end tests via [Protractor](http://www.protractortest.org)
 
 ## How to deploy the application through docker?
 
